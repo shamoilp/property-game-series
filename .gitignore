@@ -2,6 +2,9 @@
 *.pdf
 *.xlsx
 
+# Exception: sample Rent Reality Reports published as proof of product
+!07-rent-reality-report/samples/*.pdf
+
 # Python
 __pycache__/
 *.pyc

@@ -22,6 +22,8 @@ a WhatsApp Business catalogue. This repo contains the code that generates them.
 07-rent-reality-report/ rent_report.py - made-to-order rent-band report (pincode + BHK
                         -> P10/P50/P90 from live listings + BOE verdict, one-page PDF;
                         --csv path for manual comparables)
+                        samples/ - real generated reports (Bengaluru 560076,
+                        Mumbai 400076 and 400011) as proof of output
 ```
 
 ## The core idea
