@@ -19,6 +19,9 @@ a WhatsApp Business catalogue. This repo contains the code that generates them.
 04-dd-checklists/     build_dd_uae_ksa.py  - UAE and KSA due-diligence checklist PDFs
 05-harvest-planner/   build_harvest.py     - hold/refinance/redevelop/sell decision tool
 06-whatsapp-course/   9-Day-Property-Game-Course.md - daily lesson scripts + operator notes
+07-rent-reality-report/ rent_report.py - made-to-order rent-band report (pincode + BHK
+                        -> P10/P50/P90 from live listings + BOE verdict, one-page PDF;
+                        --csv path for manual comparables)
 ```
 
 ## The core idea

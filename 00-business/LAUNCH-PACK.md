@@ -16,7 +16,8 @@
 | 6 | KSA Due-Diligence Checklist | 1 PDF (4 pp) | 499 | 29 | 29 | Standalone |
 | 7 | Harvest Planner | 1 PDF (3 pp) | 499 | 29 | 29 | Cross-sell to every owner |
 | 8 | 9-Day Property Game (WhatsApp course) | 9 daily messages | 799 | 49 | 49 | Engagement engine → kit upsell |
-| 9 | **Everything Bundle** | All of the above | **3,499** | 159 | 159 | Anchor; makes #1 look cheap |
+| 9 | Rent Reality Report (per pincode+BHK) | 1 PDF, made to order | 399 | 25 | 25 | Productized service; data moat |
+| 10 | **Everything Bundle** | All static products (1–8) | **3,499** | 159 | 159 | Anchor; makes #1 look cheap |
 
 Pricing psychology: the bundle exists to anchor; the flagship kit is the intended purchase. Course buyers are the warmest upsell pool (they reply with their own deal numbers).
 
@@ -40,6 +41,9 @@ Pricing psychology: the bundle exists to anchor; the flagship kit is the intende
 
 **Item: 9-Day Property Game — ₹799**
 > One WhatsApp lesson a day for 9 days. Forces → numbers → paperwork → REITs → development → operations → exit. Every lesson ends with an exercise on a real listing in YOUR city. Finish all 9 exercises and unhappy? Full refund.
+
+**Item: Rent Reality Report — ₹399 (made to order, delivered within 24h)**
+> Stop underwriting your deal on the broker's rent quote. Send a pincode + BHK and get a one-page report from LIVE listings: the real rent band (P10/P50/P90), rent per sq ft, where the supply sits by locality — and if you share your deal price, the BOE verdict computed at the realistic rent AND the stress rent. India's first rent report that tells you whether the loan survives the truth.
 
 **Item: Which Player Are You? — FREE**
 > 20 questions. 4 investor types. Find your natural position in the property game — and the plays per market for your type — before risking a rupee, dirham or riyal. Forward freely.
@@ -92,4 +96,13 @@ python 03-boe-analyzer/build_boe_uae_ksa.py
 python 04-dd-checklists/build_dd_uae_ksa.py
 python 05-harvest-planner/build_harvest.py
 ```
+
+**Rent Reality Report (per order):**
+```
+python 07-rent-reality-report/rent_report.py --pincode 560076 --city "Bengaluru, India" --bhk 2 --price 9000000
+```
+Use `--csv listings.csv --label "Locality, City"` (columns: rent,area,locality) when the
+portal API changes or the customer's micro-market is thin. Fewer than 8 usable listings
+aborts rather than producing dishonest percentiles. Run politely: a few pages per order,
+seconds apart — this is per-customer research, not crawling.
 All brand styling (colours, WhatsApp number, disclaimer) lives in `00-business/brand.py` — edit once, rebuild all.
